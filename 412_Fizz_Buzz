@@ -1,0 +1,13 @@
+class Solution(object):
+    def fizzBuzz(self, n):
+        answer = []
+        for i in range(n):
+            if (i+1)%15 == 0:
+                answer += ["FizzBuzz"]
+            elif (i+1)%5 == 0:
+                answer += ["Buzz"]
+            elif (i+1)%3 == 0:
+                answer += ["Fizz"]
+            else:
+                answer += [str(i+1)]
+        return answer
