@@ -6,12 +6,11 @@ class Solution(object):
         """
         index = 0
         numberOfZeroes = 0
-        while index < len(nums):
+        while index < len(nums)-numberOfZeroes:
             if nums[index] == 0:
                 del nums[index]
                 numberOfZeroes += 1
+                nums.append(0)
             else:
                 index += 1
-        while numberOfZeroes > 0:
-            nums.append(0)
-            numberOfZeroes -= 1
+
